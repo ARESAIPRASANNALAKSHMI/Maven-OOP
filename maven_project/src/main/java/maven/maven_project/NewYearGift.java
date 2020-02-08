@@ -1,5 +1,5 @@
 package maven.maven_project;
-//import java.util.Collections;
+import java.util.Collections;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class NewYearGift extends Sweet implements Chocolates
@@ -65,12 +65,13 @@ public class NewYearGift extends Sweet implements Chocolates
 			int candy_upperlimit=sc.nextInt();
 			for(int j=0;j<candy_list.size();j++)
 			{
-				int a=candy_list.get(i);
+				int a=candy_list.get(j);
 				if(a>=candy_lowerlimit && a<=candy_upperlimit)
 				{
 					result_CandyList.add(a);
 				}
 			}
+			Collections.sort(chocolates_object);
 			System.out.println("Chocolates in gift according to weight are "+chocolates_object);
 			System.out.println("Cost Of Candies That Satisfying Range are:"+result_CandyList);
 		}
